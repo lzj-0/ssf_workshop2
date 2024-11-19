@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <p style="font-size: 30px">
+      <b data-th-text="|Your list of ${count} random numbers|"></b>
+    </p>
+    <div style="font-size: 200px">
+      <span data-th-each="number : ${numbers}">
+        <!-- <img data-th-src="|/images/number${number}.jpg|" /> -->
+         <span data-th-if="${number le 20}">
+          <img data-th-src="|http://www.janbrett.com/images/number${number}.jpg|" width="200px" height="250px" />
+         </span>
+         <span data-th-unless="${number le 20}">
+          <img data-th-src="|http://www.janbrett.com/images/number_${number}.jpg|" width="200px" height="250px" />
+         </span>
+      </span>
+    </div>
+</html>
